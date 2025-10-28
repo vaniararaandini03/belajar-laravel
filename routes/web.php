@@ -8,6 +8,8 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
 
+Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/pcr', function () {
     return 'Selamat Datang di Website Kampus PCR!';
 });
@@ -52,4 +54,6 @@ Route::resource('pelanggan', PelangganController::class);
 Route::get('/pelanggan/{id}/edit', [PelangganController::class, 'edit'])->name('pelanggan.edit');
 
 Route::put('/pelanggan/{id}', [PelangganController::class, 'update'])->name('pelanggan.update');
+
+Route::get('/pelanggan', [PelangganController::class, 'index']);
 
