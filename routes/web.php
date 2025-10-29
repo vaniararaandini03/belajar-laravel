@@ -7,8 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController;
-
-Route::get('/', [HomeController::class, 'index']);
+use App\Http\Controllers\UserController;
 
 Route::get('/pcr', function () {
     return 'Selamat Datang di Website Kampus PCR!';
@@ -50,10 +49,9 @@ Route::get('dashboard', [DashboardController::class, 'index'])
             -> name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
-
 Route::get('/pelanggan/{id}/edit', [PelangganController::class, 'edit'])->name('pelanggan.edit');
-
 Route::put('/pelanggan/{id}', [PelangganController::class, 'update'])->name('pelanggan.update');
 
-Route::get('/pelanggan', [PelangganController::class, 'index']);
-
+Route::resource('user', UserController::class);
+Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
