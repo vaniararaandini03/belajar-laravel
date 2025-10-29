@@ -22,7 +22,9 @@
                     <p class="mb-0">List data seluruh user</p>
                 </div>
                 <div>
-                    <a href="" class="btn btn-success text-white"><i class="far fa-question-circle me-1"></i> Tambah User</a>
+                    <a href="{{ route('user.create') }}" class="btn btn-success text-white">
+                        <i class="far fa-question-circle me-1"></i> Tambah User
+                    </a>
                 </div>
             </div>
         </div>
