@@ -40,7 +40,7 @@
                             class="mb-3">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <select name="gender" class="form-select" onchange="this.form.submit()>
+                                    <select name="gender" class="form-select" onchange="this.form.submit()">
                                         <option value="">All</option>
                                         <option value="Male" {{ request('gender') == 'Male' ? 'selected' : '' }}>Male
                                         </option>
