@@ -19,7 +19,7 @@ class CreatePelangganDummy extends Seeder
             DB::table('pelanggan')->insert([
                 'first_name' => $faker->firstName,
                 'last_name' => $faker->lastName,
-                'birthday' => $faker->date('Y-M-D', '2006-12-03'),
+                'birthday' => $faker->date('Y-m-d', '2006-12-03'),
                 'gender' => $faker->randomElement(['Male', 'Female', 'Other']),
                 'email' => $faker->unique()->safeEmail,
                 'phone' => $faker->phoneNumber
