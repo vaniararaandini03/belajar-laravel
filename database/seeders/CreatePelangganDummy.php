@@ -22,7 +22,7 @@ class CreatePelangganDummy extends Seeder
                 'birthday' => $faker->date('Y-M-D', '2006-12-03'),
                 'gender' => $faker->randomElement(['Male', 'Female', 'Other']),
                 'email' => $faker->unique()->safeEmail,
-                'phone' => $faker->phoneNumber
+                'phone' => $faker->phoneNumber,
             ]);
         }
     }
