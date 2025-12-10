@@ -12,17 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->string('avatar')->nullable()->after('password');
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrationsphp artisan cache:clea.
      */
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn('avatar');
         });
     }
 };
